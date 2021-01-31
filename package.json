@@ -1,0 +1,23 @@
+{
+  "name": "pftw",
+  "version": "1.0.0",
+  "description": "Progaming for the Web",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/warhalday/pftw.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/warhalday/pftw/issues"
+  },
+  "homepage": "https://github.com/warhalday/pftw#readme",
+  "devDependencies": {
+    "eslint": "^7.18.0"
+  }
+}
