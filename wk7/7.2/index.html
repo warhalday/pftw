@@ -1,0 +1,26 @@
+<!doctype html>
+
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <title>Llama Names</title>
+  </head>
+
+  <body>
+    <div id="list" v-cloak>
+      <h1 class="list-title">Llama names to consider</h1>
+      <div class="list-container">
+        <div class="list-heading">
+          <div class="rank">Rank</div>
+          <div class="name">Name</div>
+        </div>
+        <div v-for="(llama, index) in llamas" v-bind:class="{odd: (index + 1) % 2 !== 0}">
+          <div v-bind:class="{rank: llama.rank}"> {{llama.rank}} </div>
+          <div v-bind:class="{name: llama.name, includes: llama.name.toLowerCase().includes('llama')}"> {{llama.name}} </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

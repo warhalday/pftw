@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Llama vs. Alpaca</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div id="app" v-cloak v-bind:style="container">
+        <h1 v-bind:style="headerTitle">LLAMA vs ALPACA: <br>Which would you choose?</h1>
+        <table v-bind:style="tbl">
+            <tr>
+                <th></th>
+                <th>
+                    <a v-bind:class="{linkLlama: currentRoute==='llama'}" v-bind:title="llamaTitle" v-bind:href="llamaLink">LLAMA</a>
+                </th>
+                <th>
+                    <a v-bind:class="{hoverable: hoverableLink==='alpaca'}" v-bind:style="[baseStyle, overRideStyle]" v-bind:title="alpacaTitle" v-bind:href="alpacaLink">ALPACA</a>
+                </th>
+            </tr>
+            <tr>
+                <td>Avg. Weight</td>
+                <td>290 - 400 lbs</td>
+                <td>110 -190 lbs</td>
+            </tr>
+            <tr>
+                <td>Height</td>
+                <td>5.6 - 5.9 ft</td>
+                <td>2.7 - 3.2 ft</td>
+            </tr>
+            <tr>
+                <td>Carrys</td>
+                <td>Some</td>
+                <td>Not much if anything</td>
+            </tr>
+            <tr>
+                <td>Purpose</td>
+                <td>Pack animals (see above) and for meat</td>
+                <td>Fiber & friendship</td>
+            </tr>
+        </table>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="lva.js"></script>
+    
+  </body>
+</html>
