@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collection</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <h1>My Pro Shoe Collection</h1>
+  
+    <div id="myCollectionApp">
+
+        <table>
+            <thread>
+                <th>Rider</th>
+                <th>Model</th>
+                <th>Release Year</th>
+                <th>Image</th>
+                <th>Owned</th>
+            </thread>
+
+            <tbody>
+                <tr 
+                v-for="(box, idx) in shoes"
+                v-bind:class="{odd: idx % 2 !== 0,
+                owned: box.owned === 'NO'}">
+                    <td>{{box.rider}}</td>
+                    <td>{{box.model}}</td>
+                    <td>{{box.releaseYear}}</td>
+                    <td><img v-bind:src="box.image"
+                    v-bind:alt="box.model + ' ' + box.rider"/></td>
+                    <td>{{box.owned}}</td>
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+
+    <footer>
+      <p>*Red underline indicates I found out the shoe existed after they stopped making them</p>
+    </footer>
+
+  <script src="collection.js"></script>
+</body>
+</html>
