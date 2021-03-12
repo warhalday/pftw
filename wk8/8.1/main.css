@@ -1,0 +1,46 @@
+body, h1 {
+    background-color: lightslategrey;
+    color: black;
+    font-family: sans-serif;
+}
+h1 {
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 30px;
+}
+
+h3 {
+    color: black;
+}
+form {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color:  lightgray;
+}
+div {
+    margin: 10px 0;
+    display: flex;
+}
+div.alpaca-status, div.alpaca-color, div.output {
+    flex-direction: column;
+}
+div.output {
+    background-color: rgb(126, 150, 182);
+    padding: 2rem;
+    margin: 0;
+}
+div label {
+    margin-right: 10px;
+}
+div input, div select {
+    flex-grow: 1;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+li {
+    margin: 5px 0;
+} 
