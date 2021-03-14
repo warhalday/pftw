@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collection</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <h1>My Pro Shoe Collection</h1>
+  
+    <div id="myCollectionApp">
+
+        <table>
+            <thread>
+                <th>Brand</th>
+                <th>Rider</th>
+                <th>Model</th>
+                <th>Release Year</th>
+                <th>Image</th>
+                <th>In Collection</th>
+                <th class="cell actions">Action</th>
+            </thread>
+
+            <tbody>
+                <tr 
+                v-for="(box, idx) in shoes"
+                v-bind:class="{odd: idx % 2 !== 0,
+                collected: box.collected === false }">
+                    <td>{{box.brand}}</td>
+                    <td>{{box.rider}}</td>
+                    <td>{{box.model}}</td>
+                    <td>{{box.releaseYear}}</td>
+                    <td><img v-bind:src="box.image"
+                    v-bind:alt="box.model + ' ' + box.rider"/></td>
+                    <td>{{box.collected}}</td>
+                    <td class="cell actions"><button type="button" v-on:click="deleteItem (box)">Delete</button></td>
+                </tr>
+            </tbody>
+
+        </table>
+        <form v-on:submit.prevent="submitHandler" class="new-console-form">
+            <fieldset>
+                <legend>Add a Pro Shoe to the Collection</legend>
+                <div>
+                    <label for="brand">Brand</label>
+                    <input id="brand" type="text" v-model="newShoeObj.brand">
+                </div>
+                <div>
+                    <label for="rider">Rider</label>
+                    <input id="rider" type="text" v-model="newShoeObj.rider">
+                </div>
+                <div>
+                    <label for="model">Model</label>
+                    <input id="model" type="text" v-model="newShoeObj.model">
+                </div>
+                <div>
+                    <label for="releaseYear">Release Year</label>
+                    <input id="releaseYear" type="date" v-model="newShoeObj.releaseYear">
+                </div>
+                <div>
+                    <label for="image">Image</label>
+                    <input id="image" type="text" v-model="newShoeObj.image">
+                </div>
+                <div>
+                    <label for="collected">Collected</label>
+                    <input id="collected" type="checkbox" v-model="newShoeObj.collected">
+                </div>
+                <button type="submit">Submit</button>
+            </fieldset>
+        </form>
+    </div>
+
+    <footer>
+      <p>Red underline indicates I found out the shoe existed after they stopped making them</p>
+    </footer>
+
+  <script src="collection.js"></script>
+</body>
+</html>
