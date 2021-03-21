@@ -1,0 +1,85 @@
+html {
+    background-color:lightgray;
+    padding-top: 80px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+table, th, td, tr {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 2em;
+    padding-right: 2em;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th {
+    text-transform: uppercase;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    
+}
+
+td, tr {
+    border: 1px solid black;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    padding-bottom: 2em;;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.odd {
+    background: whitesmoke;
+}
+
+.collected {
+    text-decoration: double underline red;    
+}
+
+.new-console-form fieldset {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.new-console-form {
+    margin-top: 40px;
+}
+
+.new-console-form div {
+    margin: 40px 0;
+    width: 120px;
+    text-align: left;
+}
+
+.new-console-form div label {
+    max-width: 120px;
+}
+
+.new-console-form input {
+    max-width: 132px;
+    display:block;
+}
+
+/* FOOTER */ /* FOOTER */ /* FOOTER */ /* FOOTER */
+
+footer {
+    padding-right: 10px;
+    padding-top: 20px;
+    padding-bottom: 100px;
+    text-align: right;
+    text-decoration: double underline red;
+}
