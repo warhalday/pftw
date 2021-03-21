@@ -10,6 +10,7 @@ Vue.component('shoes-component', {
     props: ['brand', 'rider', 'model', 'releaseYear', 'image', 'collected']
   });
 
+
 const vm = new Vue({
     el: "#myCollectionApp",
     data: {
