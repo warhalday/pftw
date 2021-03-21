@@ -1,11 +1,11 @@
 Vue.component('shoes-component', {
-    template: `<tr class="dolls-container" v-cloak>
-                <td class="cell">{{brand}}</td>
-                <td class="cell">{{rider}}</td>
-                <td class="cell">{{model}}</td>
-                <td class="cell">{{releaseYear}}</td>
-                <td class="cell"><img v-bind:src="image" class="photo"></td>
-                <td class="cell">{{collected}}</td>
+    template: `<tr>
+                <td>{{brand}}</td>
+                <td>{{rider}}</td>
+                <td>{{model}}</td>
+                <td>{{releaseYear}}</td>
+                <td><img v-bind:src="image" class="photo"></td>
+                <td>{{collected}}</td>
               </tr>`,
     props: ['brand', 'rider', 'model', 'releaseYear', 'image', 'collected']
   });
