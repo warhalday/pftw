@@ -1,0 +1,22 @@
+body {
+    margin: 100px;
+    background: rgb(223, 216, 216);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    padding-bottom: 20px;
+}
+
+a:link {
+    text-decoration: none;
+    
+}
+
+a:hover {
+    color: hotpink;
+}
